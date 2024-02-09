@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+  background-color: green;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-area {
+  position: relative;
+  height: 200px;
+  width: 200px; /* Ensure this is enough to contain the fanned cards */
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+img {
+  position: absolute;
+  bottom: 0; /* Align cards to the bottom */
+  left: 50%; /* Center cards horizontally */
+  transform-origin: bottom center; /* Ensure rotation looks natural */
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
